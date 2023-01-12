@@ -7,13 +7,7 @@
 
 / {
     behaviors {
-        td_q_esc: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp ESC>;
-        };
+        
     };
 
     keymap {
@@ -22,7 +16,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬────────────────┬────────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U             │  Y         │  P       │
-            &td_q_esc  &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U            &kp Y        &kp P
+            &kp Q     &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U            &kp Y        &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────┼────────────┼──────────┤
         //│  A       │  R       │  LALT S  │  LGUI T  │  G       │   │  M       │  RGUI N  │  RALT E        │  I         │  O       │
             &kp A      &kp R     &mt LALT S &mt LGUI T  &kp G          &kp M     &mt RGUI N  &mt RALT E       &kp I        &kp O
