@@ -52,7 +52,7 @@
             &kp A      &kp R     &ht LALT S &ht LGUI T  &kp G          &kp M     &ht RGUI N  &ht RALT E       &kp I        &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────┼────────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <          ? │ . >      ! │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &ht QMARK COMMA  &ht EXCL DOT  ENTER
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &mt QMARK COMMA  &mt EXCL DOT  ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────┴────────────┴──────────╯
                                          &lt LOWER TAB  &sk LCTRL     &sk LSHIFT  &lt RAISE SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
