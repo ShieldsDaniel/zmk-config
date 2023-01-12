@@ -5,24 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define ADJUST  3
-
 / {
     behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-
         td_q_esc: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -41,12 +25,12 @@
             &td_q_esc  &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U            &kp Y        &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────┼────────────┼──────────┤
         //│  A       │  R       │  LALT S  │  LGUI T  │  G       │   │  M       │  RGUI N  │  RALT E        │  I         │  O       │
-            &kp A      &kp R     &ht LALT S &ht LGUI T  &kp G          &kp M     &ht RGUI N  &ht RALT E       &kp I        &kp O
+            &kp A      &kp R     &mt LALT S &mt LGUI T  &kp G          &kp M     &mt RGUI N  &mt RALT E       &kp I        &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────┼────────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <          ? │ . >      ! │ ENTER    │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &mt QMARK COMMA  &mt EXCL DOT  ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────┴────────────┴──────────╯
-                                         &lt LOWER TAB  &sk LCTRL     &sk LSHIFT  &lt RAISE SPACE
+                                            &lt 1 TAB  &sk LCTRL      &sk LSHIFT &lt 2 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
