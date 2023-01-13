@@ -11,9 +11,16 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        dblt: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -24,7 +31,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭───────────────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q   ESC │  W       │  F       │  P       │  B       │   │  J                │  L       │  U       │  Y       │ BSPC     │
-           &td Q ESC   &kp W      &kp F      &kp P      &kp B          &kp J               &kp L      &kp U      &kp Y      &kp BSPC
+           &dblt Q ESC &kp W      &kp F      &kp P      &kp B          &kp J               &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S  ALT  │  T  GUI  │  G       │   │  M           MEH  │  N   GUI │  E   ALT │  I       │ O        │
             &kp A      &kp R    &mt LALT S  &mt LGUI T  &kp G         &mt LC(LS(LALT)) M  &mt RGUI N &mt RALT E  &kp I     &kp O
