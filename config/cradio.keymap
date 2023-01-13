@@ -16,9 +16,9 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        dblt: tap_dance_0 {
+        dblt: tap_dance_dblt {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+            label = "DOUBLE_TAP";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
