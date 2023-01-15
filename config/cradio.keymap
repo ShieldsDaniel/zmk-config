@@ -5,12 +5,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
-    tapping-term-ms = <300>;
-};
-
 / {
     behaviors {
+        hr: homerow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW";
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
@@ -38,7 +43,7 @@
             &td_q      &kp W      &kp F      &kp P      &kp B          &kp J               &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S  ALT  │  T  GUI  │  G       │   │  M           MEH  │  N   GUI │  E   ALT │  I       │ O        │
-            &kp A      &kp R    &mt LALT S  &mt LGUI T  &kp G         &mt LC(LS(LALT)) M  &mt RGUI N &mt RALT E  &kp I     &kp O
+            &kp A      &kp R    &hr LALT S  &hr LGUI T  &kp G         &hr LC(LS(LALT)) M  &hr RGUI N &hr RALT E  &kp I     &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K                │  H       │ , <    ? │ . >    ! │ ENTER    │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K               &kp H  &td QMARK COMMA &td EXCL DOT &kp ENTER
@@ -55,7 +60,7 @@
             &kp EXCL   &kp AT     &kp HASH     &kp DLLR     &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp GRAVE  &kp BSPC
         //├──────────┼──────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
         //│ :        │  "       │  {  ALT    │  }  GUI    │  -       │   │  =       │ (   GUI    │ )   ALT    │ '        │  ;       │
-            &kp COLN   &kp DQT  &td LALT LBRC &td LGUI RBRC &kp MINUS     &kp EQUAL &td RGUI LPAR &td RALT RPAR &kp SQT &kp SEMI
+            &kp COLN   &kp DQT  &hr LALT LBRC &hr LGUI RBRC &kp MINUS     &kp EQUAL &hr RGUI LPAR &hr RALT RPAR &kp SQT &kp SEMI
         //├──────────┼──────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
         //│ \        │  |       │  [         │  ]         │  _       │   │  +       │ <          │ >          │ ?        │  /       │
             &kp BSLH   &kp PIPE   &kp LBKT     &kp RBKT     &kp UNDER      &kp PLUS   &kp LT       &kp GT       &kp QMARK  &kp FSLH
