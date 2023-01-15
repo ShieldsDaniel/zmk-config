@@ -5,6 +5,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define MEH(kc) &hr LC(LS(LALT)) kc
+#define SCREEN &kp LG(LS(N4))
+#define RECORD  
+
 / {
     behaviors {
         hr: homerow {
@@ -38,16 +42,16 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭───────────────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q   ESC │  W       │  F       │  P       │  B       │   │  J                │  L       │  U       │  Y       │ BSPC     │
-            &td_q      &kp W      &kp F      &kp P      &kp B          &kp J               &kp L      &kp U      &kp Y      &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S  ALT  │  T  GUI  │  G       │   │  M           MEH  │  N   GUI │  E   ALT │  I       │ O        │
-            &kp A      &kp R    &hr LALT S  &hr LGUI T  &kp G         &hr LC(LS(LALT)) M  &hr RGUI N &hr RALT E  &kp I     &kp O
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │   │  K                │  H       │ , <    ? │ . >    ! │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K               &kp H  &td QMARK COMMA &td EXCL DOT &kp ENTER
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├───────────────────┼──────────┼──────────┴──────────┴──────────╯
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬─────────────┬─────────────┬──────────╮
+        //│  Q   ESC │  W       │  F       │  P       │  B       │   │  J       │  L       │  U          │  Y          │  BSPC    │
+            &td_q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U         &kp Y         &kp BSPC
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┼─────────────┼──────────┤
+        //│  A       │  R       │  S  ALT  │  T  GUI  │  G       │   │  M  MEH  │  N   GUI │  E      ALT │  I          │  O       │
+            &kp A      &kp R    &hr LALT S  &hr LGUI T  &kp G         &hr MEH(M) &hr RGUI N  &hr RALT E    &kp I         &kp O
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┼─────────────┼──────────┤
+        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <       ? │ . >       ! │  ENTER   │
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H    &td QMARK COMMA &td EXCL DOT &kp ENTER
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┴─────────────┴──────────╯
                                            &lt 1 TAB    &sk LCTRL    &sk LSHIFT   &lt 2 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
@@ -89,16 +93,16 @@
 
         tri_layer {
             bindings = <
-        //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────────┬─────────────┬──────────╮
-        //│          │            │            │            │ Wheel Up │   │  Down    │ Right   │             │             │  BSPC    │
-            &trans     &trans       &trans       &trans      &trans          &kp DOWN   &kp RIGHT &trans        &trans        &kp BSPC
-        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────────┼─────────────┼──────────┤
-        //│          │            │ L Click    │ R Click    │Wheel Down│   │          │         │             │             │  F12     │
-            &trans     &trans       &trans       &trans       &trans         &trans     &trans    &trans        &trans        &kp F12
-        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────────┼─────────────┼──────────┤
-        //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │  Up      │ Left    │             │             │  ENTER   │
-          &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &kp UP   &kp LEFT  &kp LG(LS(N4)) &kp LG(LS(N5)) &kp ENTER
-        //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────────┴─────────────┴──────────╯
+        //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────┬─────────┬──────────╮
+        //│          │            │            │            │ Wheel Up │   │  Down    │ Right   │         │         │  BSPC    │
+            &trans     &trans       &trans       &trans      &trans          &kp DOWN   &kp RIGHT &trans    &trans    &kp BSPC
+        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
+        //│          │            │ L Click    │ R Click    │Wheel Down│   │          │         │         │         │  F12     │
+            &trans     &trans       &trans       &trans       &trans         &trans     &trans    &trans    &trans    &kp F12
+        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
+        //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │  Up      │ Left    │         │         │  ENTER   │
+          &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &kp UP   &kp LEFT    SCREEN    RECORD    &kp ENTER
+        //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┴─────────┴──────────╯
                                                  &none        &sk LCTRL    &sk LSHIFT   &none
         //                                     ╰────────────┴──────────╯   ╰──────────┴─────────╯
             >;
