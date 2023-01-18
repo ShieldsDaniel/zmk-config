@@ -52,6 +52,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <       ? │ . >       ! │  ENTER   │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H    &td QMARK COMMA &td EXCL DOT &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┴─────────────┴──────────╯
+        //                                 │ Tab   L1 │ OSM CTLR │   │ OSM SHIFT│ SPC   L2 │
                                            &lt 1 TAB    &sk LCTRL    &sk LSHIFT   &lt 2 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
@@ -69,6 +70,7 @@
         //│ \        │  |       │  [         │  ]         │  _       │   │  +       │ <          │ >          │ ?        │  /       │
             &kp BSLH   &kp PIPE   &kp LBKT     &kp RBKT     &kp UNDER      &kp PLUS   &kp LT       &kp GT       &kp QMARK  &kp FSLH
         //╰──────────┴──────────┴────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┴──────────┴──────────╯
+        //                                   │            │ OSM CTLR │   │ OSM SHIFT│ SPC     L3 │
                                                 &none      &sk LCTRL      &sk LSHIFT  &lt 3 SPACE
         //                                   ╰────────────┴──────────╯   ╰──────────┴────────────╯
             >;
@@ -86,6 +88,7 @@
         //│          │          │          │          │          │   │  0       │  1       │  2       │  3       │  ENTER   │
             &trans     &trans     &trans     &trans     &trans         &kp N0     &kp N1     &kp N2     &kp N3     &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 │ Tab   L3 │ OSM CTLR │   │ OSM SHIFT│          │
                                              &lt 3 TAB  &sk LCTRL    &sk LSHIFT   &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
@@ -94,15 +97,16 @@
         tri_layer {
             bindings = <
         //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────┬─────────┬──────────╮
-        //│          │            │            │            │ Wheel Up │   │  Down    │ Right   │         │         │  BSPC    │
+        //│          │            │            │            │          │   │  Down    │ Right   │         │         │  BSPC    │
             &trans     &trans       &trans       &trans      &trans          &kp DOWN   &kp RIGHT &trans    &trans    &kp BSPC
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
-        //│          │            │ L Click    │ R Click    │Wheel Down│   │          │         │         │         │  F12     │
-            &trans     &trans       &trans       &trans       &trans         &trans     &trans    &trans    &trans    &kp F12
+        //│  F12     │            │            │            │          │   │          │         │         │         │          │
+            &kp F12    &trans       &trans       &trans       &trans         &trans     &trans    &trans    &trans    &trans
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
         //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │  Up      │ Left    │         │         │  ENTER   │
           &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &kp UP   &kp LEFT    SCREEN    RECORD    &kp ENTER
         //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┴─────────┴──────────╯
+        //                                     │            │ OSM CTLR │   │ OSM SHIFT│         │
                                                  &none        &sk LCTRL    &sk LSHIFT   &none
         //                                     ╰────────────┴──────────╯   ╰──────────┴─────────╯
             >;
