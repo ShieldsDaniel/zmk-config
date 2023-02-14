@@ -47,13 +47,13 @@
             &td_q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U         &kp Y         &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┼─────────────┼──────────┤
         //│  A       │  R       │  S   ALT │  T   GUI │  G       │   │  M   MEH │  N   GUI │  E      ALT │  I          │  O       │
-            &kp A      &kp R     &hr LALT S &hr LGUI T  &kp G          MEH(M)    &hr RGUI N  &hr RALT E    &kp I         &kp O
+            &kp A      &kp R     &hr LALT S &hr LGUI T  &kp G          MEH(M)    &hr RGUI N  &hr LALT E    &kp I         &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┼─────────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <       ? │ . >       ! │  ENTER   │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H    &td QMARK COMMA &td EXCL DOT &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┴─────────────┴──────────╯
-        //                                 │ TAB   L1 │ OSM CTLR │   │ OSM SHIFT│ SPC   L2 │
-                                            &lt 1 TAB  &sk LCTRL      &sk LSHIFT &lt 2 SPACE
+        //                                 │ BSPC  L1 │ OSM CTLR │   │ OSM SHIFT│ SPC   L2 │
+                                            &lt 1 BSPC  &sk LCTRL      &sk LSHIFT &lt 2 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -61,14 +61,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬────────────┬────────────┬──────────╮   ╭──────────┬────────────┬────────────┬──────────┬──────────╮
-        //│  !       │  @       │  #         │  $         │  %       │   │ ^        │ &          │ *          │ "        │  ;       │
-            &kp EXCL   &kp AT     &kp HASH     &kp DLLR     &kp PRCNT      &kp CARET  &kp AMPS     &kp STAR     &kp DQT    &kp SEMI
+        //│  ESC     │  @       │  #         │  $         │  %       │   │ ^        │ &          │ *          │ "        │  ;       │
+            &kp ESC   &kp AT     &kp HASH     &kp DLLR     &kp PRCNT      &kp CARET  &kp AMPS     &kp STAR     &kp DQT    &kp SEMI
         //├──────────┼──────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
-        //│ \    ALT │  `       │  [         │  ]         │  -       │   │  =       │ {          │ }          │ '        │  :   ALT │
-         &hr LALT BSLH &kp GRAVE  &kp LBKT     &kp RBKT     &kp MINUS      &kp EQUAL  &kp LBRC     &kp RBRC     &kp SQT  &hr RALT COLN
+        //│ TAB      │  `       │  [         │  ]         │  -       │   │  =       │ {          │ }          │ '        │  :   ALT │
+         &hr LALT BSLH &kp GRAVE  &kp LBKT     &kp RBKT     &kp MINUS      &kp EQUAL  &hr LBRC LGUI &kp RBRC     &kp SQT  &hr RALT COLN
         //├──────────┼──────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
-        //│ |        │  ~       │  <         │  >         │  _       │   │  +       │ (          │ )          │ ?        │  /       │
-            &kp PIPE   &kp TILDE  &kp LT       &kp GT       &kp UNDER      &kp PLUS   &kp LPAR     &kp RPAR     &kp QMARK  &kp FSLH
+        //│ \        │  ~       │  <         │  >         │  _       │   │  +       │ (          │ )          │ ?        │  /       │
+            &kp BSLH  &kp TILDE  &kp LT       &kp GT       &kp UNDER      &kp PLUS   &kp LPAR     &kp RPAR     &kp QMARK  &kp FSLH
         //╰──────────┴──────────┴────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┴──────────┴──────────╯
         //                                   │            │ OSM CTLR │   │ OSM SHIFT│ SPC     L3 │
                                                &none       &sk LCTRL      &sk LSHIFT  &lt 3 SPACE
@@ -79,11 +79,11 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  F7      │  F8      │  F9      │  F10     │   │  ,       │  7       │  8       │  9       │          │
-            &trans     &kp F7     &kp F8     &kp F9     &kp F10        &kp COMMA  &kp N7     &kp N8     &kp N9     &trans
+        //│  ESC     │  F7      │  F8      │  F9      │  F10     │   │  ,       │  7       │  8       │  9       │          │
+            &kp ESC    &kp F7     &kp F8     &kp F9     &kp F10        &kp COMMA  &kp N7     &kp N8     &kp N9     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  F4      │  F5      │  F6      │  F11     │   │  .       │  4       │  5       │  6       │          │
-            &trans     &kp F4     &kp F5     &kp F6     &kp F11        &kp DOT    &kp N4     &kp N5     &kp N6     &trans
+        //│ TAB      │  F4      │  F5      │  F6      │  F11     │   │  .       │  4       │  5       │  6       │          │
+            &kp TAB    &kp F4     &kp F5     &kp F6     &kp F11        &kp DOT    &kp N4     &kp N5     &kp N6     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F1      │  F2      │  F3      │  F12     │   │  0       │  1       │  2       │  3       │          │
             &trans     &kp F1     &kp F2     &kp F3     &kp F12        &kp N0     &kp N1     &kp N2     &kp N3     &trans
@@ -97,17 +97,35 @@
         tri_layer {
             bindings = <
         //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────┬─────────┬──────────╮
+        //│          │  DELETE    │  Screen    │  Record    │          │   │  Down    │ Right   │         │         │          │
+            &to 4     &kp DEL      SCREEN       RECORD       &trans         &kp DOWN   &kp RIGHT &trans    &trans    &trans
+        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
+        //│          │            │            │            │          │   │          │         │         │         │          │
+            &kp LT     &kp LBKT    &hr LBRC LALT &hr LGUI LPAR  &trans      &trans  &hr LGUI RPAR &hr LALT RBRC &kp RBKT  &kp GT
+        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
+        //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │  Up      │ Left    │         │         │          │
+            &trans    &trans      &trans       &trans        &trans          &kp UP   &kp LEFT     &trans    &trans    &trans
+        //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┴─────────┴──────────╯
+        //                                     │            │ OSM CTLR │   │ OSM SHIFT│         │
+                                                 &none        &sk LCTRL     &sk LSHIFT  &none
+        //                                     ╰────────────┴──────────╯   ╰──────────┴─────────╯
+            >;
+        };
+
+        reset_layer {
+            bindings = <
+        //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────┬─────────┬──────────╮
         //│  ESC     │  DELETE    │  Screen    │  Record    │          │   │  Down    │ Right   │         │         │          │
-            &kp ESC     &kp DEL      SCREEN       RECORD       &trans         &kp DOWN   &kp RIGHT &trans    &trans    &trans
+            &to 0     &to 0      &to 0        &to 0         &to 0          &to 0     &to 0     &to 0     &to 0     &to 0
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
         //│  Tab     │            │            │            │          │   │          │         │         │         │          │
-            &kp TAB     &trans       &trans       &trans       &trans         &trans     &trans    &trans    &trans    &trans
+            &to 0     &to 0      &to 0        &to 0         &to 0          &to 0     &to 0     &to 0     &to 0     &to 0
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
         //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │  Up      │ Left    │         │         │          │
           &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &kp UP   &kp LEFT     &trans    &trans    &trans
         //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┴─────────┴──────────╯
-        //                                     │            │ OSM CTLR │   │ OSM SHIFT│         │
-                                                 &none        &sk LCTRL     &sk LSHIFT  &none
+        //                                     │            │          │   │ OSM SHIFT│         │
+                                                 &to 0        &to 0         &to 0        &to 0
         //                                     ╰────────────┴──────────╯   ╰──────────┴─────────╯
             >;
         };
