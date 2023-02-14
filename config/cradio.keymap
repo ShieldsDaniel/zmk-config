@@ -52,8 +52,8 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <       ? │ . >       ! │  ENTER   │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H    &td QMARK COMMA &td EXCL DOT &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────┴─────────────┴──────────╯
-        //                                 │ TAB   L1 │ OSM CTLR │   │ OSM SHIFT│ SPC   L2 │
-                                            &lt 1 TAB  &sk LCTRL      &sk LSHIFT &lt 2 SPACE
+        //                                 │ BSPC  L1 │ OSM CTLR │   │ OSM SHIFT│ SPC   L2 │
+                                            &lt 1 BSPC &sk LCTRL      &sk LSHIFT &lt 2 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -61,14 +61,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬────────────┬────────────┬──────────╮   ╭──────────┬────────────┬────────────┬──────────┬──────────╮
-        //│  !       │  @       │  #         │  $         │  %       │   │ ^        │ &          │ *          │ "        │  ;       │
-            &kp EXCL   &kp AT     &kp HASH     &kp DLLR     &kp PRCNT      &kp CARET  &kp AMPS     &kp STAR     &kp DQT    &kp SEMI
+        //│  ESC     │  @       │  #         │  $         │  %       │   │ ^        │ &          │ *          │ |        │          │
+            &kp ESC   &kp AT     &kp HASH     &kp DLLR     &kp PRCNT      &kp CARET  &kp AMPS     &kp STAR     &kp DQT    &trans
         //├──────────┼──────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
-        //│ \    ALT │  `       │  [         │  ]         │  -       │   │  =       │ {          │ }          │ '        │  :   ALT │
-         &hr LALT BSLH &kp GRAVE  &kp LBKT     &kp RBKT     &kp MINUS      &kp EQUAL  &kp LBRC     &kp RBRC     &kp SQT  &hr RALT COLN
+        //│  TAB     │  ~ SHIFT │  \     ALT │  -     GUI │  ;       │   │  "       │ =      GUI │ /      GUI │ `  SHIFT │  :       │
+        &kp TAB &hr LSHIFT TILDE &hr LALT BSLH &hr LGUI MINUS &kp SEMI  &kp DQT  &kp LBRC     &kp RBRC     &kp SQT  &hr RALT COLN
         //├──────────┼──────────┼────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
-        //│ |        │  ~       │  <         │  >         │  _       │   │  +       │ (          │ )          │ ?        │  /       │
-            &kp PIPE   &kp TILDE  &kp LT       &kp GT       &kp UNDER      &kp PLUS   &kp LPAR     &kp RPAR     &kp QMARK  &kp FSLH
+        //│          │          │  !         │  _         │          │   │          │  +         │ ?          │          │          │
+            &trans    &trans     &kp EXCL     &kp GT       &trans         &trans     &kp PLUS     &kp QMARK  &trans   &trans
         //╰──────────┴──────────┴────────────┼────────────┼──────────┤   ├──────────┼────────────┼────────────┴──────────┴──────────╯
         //                                   │            │ OSM CTLR │   │ OSM SHIFT│ SPC     L3 │
                                                &none       &sk LCTRL      &sk LSHIFT  &lt 3 SPACE
@@ -88,17 +88,38 @@
         //│          │  F1      │  F2      │  F3      │  F12     │   │  0       │  1       │  2       │  3       │          │
             &trans     &kp F1     &kp F2     &kp F3     &kp F12        &kp N0     &kp N1     &kp N2     &kp N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │ Tab   L3 │ OSM CTLR │   │ OSM SHIFT│          │
-                                            &lt 3 TAB  &sk LCTRL      &sk LSHIFT  &none
+        //                                 │ BSPC  L3 │ OSM CTLR │   │ OSM SHIFT│          │
+                                            &lt 3 BSPC &sk LCTRL      &sk LSHIFT  &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
+
+        // &hr LALT BSLH &kp GRAVE  &kp LBKT     &kp RBKT     &kp MINUS      &kp EQUAL  &kp LBRC     &kp RBRC     &kp SQT  &hr RALT COLN
+        // &kp PIPE   &kp TILDE  &kp LT       &kp GT       &kp UNDER      &kp PLUS   &kp LPAR     &kp RPAR     &kp QMARK  &kp FSLH
         tri_layer {
             bindings = <
         //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────┬─────────┬──────────╮
         //│  ESC     │  DELETE    │  Screen    │  Record    │          │   │  Down    │ Right   │         │         │          │
             &kp ESC     &kp DEL      SCREEN       RECORD       &trans         &kp DOWN   &kp RIGHT &trans    &trans    &trans
+        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
+        //│          │            │            │            │          │   │          │         │         │         │          │
+            &kp TAB     &trans       &trans       &trans       &trans         &trans     &trans    &trans    &trans    &trans
+        //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
+        //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │  Up      │ Left    │         │         │          │
+          &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &kp UP   &kp LEFT     &trans    &trans    &trans
+        //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┴─────────┴──────────╯
+        //                                     │            │ OSM CTLR │   │ OSM SHIFT│         │
+                                                 &none        &sk LCTRL     &sk LSHIFT  &none
+        //                                     ╰────────────┴──────────╯   ╰──────────┴─────────╯
+            >;
+        };
+
+        reset_layer {
+            bindings = <
+        //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬─────────┬─────────┬─────────┬──────────╮
+        //│  ESC     │  DELETE    │  Screen    │  Record    │          │   │  Down    │ Right   │         │         │          │
+            &kp ESC     &kp DEL      SCREEN       RECORD       &trans         &kp DOWN   &kp RIGHT &trans    &trans   &trans
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
         //│  Tab     │            │            │            │          │   │          │         │         │         │          │
             &kp TAB     &trans       &trans       &trans       &trans         &trans     &trans    &trans    &trans    &trans
