@@ -142,7 +142,7 @@
             &kp Q      &kp W      &kp F      &kp P      &kp B            &kp J      &kp L      &kp U       &kp Y       GERMAN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤     ├──────────┼──────────┼───────────┼───────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G    L4 │     │  M   MEH │  N       │  E        │  I        │  O       │
-            &kp A      &kp R      &kp S      &kp T      &lt 4 G          &kp M      &kp N      &kp E       &kp I       &kp O
+            &kp A      &kp R      &kp S      &kp T      &lt 4 G          MEH(M)     &kp N      &kp E       &kp I       &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤     ├──────────┼──────────┼───────────┼───────────┼──────────┤
         //│  Z       │  X   (TAB)  C       │  D       │  V       │     │  K       │  H       │  ,    (GUI)  .        │  ENTER   │
             &kp Z      &kp X      &kp C      &kp D      &kp V            &kp K      &kp H      &kp COMMA   &kp DOT     &kp ENTER
