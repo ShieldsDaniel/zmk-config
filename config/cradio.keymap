@@ -15,7 +15,7 @@
 / {
     macros {
         back_pipe: back_pipe {
-            label = "ZM_umlaut";
+            label = "ZM_back_pipe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -24,7 +24,7 @@
                 ;
         };
         forward_pipe: forward_pipe {
-            label = "ZM_umlaut";
+            label = "ZM_forward_pipe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -33,7 +33,7 @@
                 ;
         };
         back_arrow: back_arrow {
-            label = "ZM_umlaut";
+            label = "ZM_back_arrow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -42,7 +42,7 @@
                 ;
         };
         small_arrow: small_arrow {
-            label = "ZM_umlaut";
+            label = "ZM_small_arrow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -50,8 +50,8 @@
                 , <&macro_tap &kp GT>
                 ;
         };
-        squiggly_arrow: small_arrow {
-            label = "ZM_umlaut";
+        squiggly_arrow: squiggly_arrow {
+            label = "ZM_small_arrow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -60,7 +60,7 @@
                 ;
         };
         fat_arrow: fat_arrow {
-            label = "ZM_umlaut";
+            label = "ZM_fat_arrow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -69,7 +69,7 @@
                 ;
         };
         js_equal: js_equal {
-            label = "ZM_umlaut";
+            label = "ZM_js_equal";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
