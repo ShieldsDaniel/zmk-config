@@ -9,8 +9,7 @@
 #define SCREEN &kp LG(LS(N4))
 #define RECORD &kp LG(LS(N5))
 #define EURO &kp LA(LS(N2))
-#define SHARP_S &kp LA(S)
-#define GERMAN &td LA(U) SHARP_S
+#define GERMAN &td LA(U) LA(S)
 
 / {
     macros {
