@@ -236,7 +236,7 @@
             &to 0      &to 0        &to 0        &to 0        &to 0          &to 0      &to 0     &to 0     &to 0     &to 0
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┼─────────┼──────────┤
         //│BOOTLOADER│PROFILE 0   │PROFILE 1   │PROFILE 2   │CLEAR BT  │   │          │         │         │         │          │
-          &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &to 0      &to 0     &to 0     &to 0     to 0&
+          &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR     &to 0      &to 0     &to 0     &to 0     &to 0
         //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼─────────┼─────────┴─────────┴──────────╯
         //                                     │            │          │   │          │         │
                                                  &to 0        &to 0           &to 0     &to 0
