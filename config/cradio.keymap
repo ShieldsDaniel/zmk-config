@@ -58,7 +58,7 @@
                 ;
         };
         squiggly_arrow: squiggly_arrow {
-            label = "ZM_small_arrow";
+            label = "ZM_squiggly_arrow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
